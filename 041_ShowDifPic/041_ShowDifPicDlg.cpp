@@ -61,6 +61,10 @@ void CMy041_ShowDifPicDlg::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_STATIC_JPG, tu2);
 	DDX_Control(pDX, IDC_STATIC_GIF, tu4);
+	DDX_Control(pDX, IDC_STATIC_TU5, tu5);
+	DDX_Control(pDX, IDC_STATIC_TU7, tu7);
+	DDX_Control(pDX, IDC_STATIC_TU6, tu6);
+	DDX_Control(pDX, IDC_STATIC_TU8, tu8);
 }
 
 BEGIN_MESSAGE_MAP(CMy041_ShowDifPicDlg, CDialog)
@@ -69,6 +73,8 @@ BEGIN_MESSAGE_MAP(CMy041_ShowDifPicDlg, CDialog)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON4, &CMy041_ShowDifPicDlg::OnBnClickedButton4)
 	ON_BN_CLICKED(IDC_BUTTON2, &CMy041_ShowDifPicDlg::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON1, &CMy041_ShowDifPicDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON3, &CMy041_ShowDifPicDlg::OnBnClickedButton3)
 END_MESSAGE_MAP()
 
 
@@ -165,12 +171,30 @@ HCURSOR CMy041_ShowDifPicDlg::OnQueryDragIcon()
 void CMy041_ShowDifPicDlg::OnBnClickedButton4()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	
+	if (tu8.Load(MAKEINTRESOURCE(IDR_GIF1), _T("gif")))
+		tu8.Draw();
 }
 
 
 void CMy041_ShowDifPicDlg::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	
+	if (tu6.Load(MAKEINTRESOURCE(IDR_JPG1), _T("jpg")))
+		tu6.Draw();
+}
+
+
+void CMy041_ShowDifPicDlg::OnBnClickedButton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	HBITMAP hbitmap = ::LoadBitmap(AfxGetInstanceHandle(), MAKEINTRESOURCE(IDB_BITMAP1));
+	tu5.SetBitmap(hbitmap);
+}
+
+
+void CMy041_ShowDifPicDlg::OnBnClickedButton3()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	HICON hicon = AfxGetApp()->LoadIcon(IDI_ICON1);
+	tu7.SetIcon(hicon);
 }

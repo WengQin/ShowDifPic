@@ -37,4 +37,10 @@ public:
 	CPictureEx tu4;
 	afx_msg void OnBnClickedButton4();
 	afx_msg void OnBnClickedButton2();
+	afx_msg void OnBnClickedButton1();
+	CStatic tu5;
+	CStatic tu7;
+	CPictureEx tu6;
+	CPictureEx tu8;
+	afx_msg void OnBnClickedButton3();
 };
