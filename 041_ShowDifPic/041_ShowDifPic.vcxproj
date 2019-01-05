@@ -204,9 +204,18 @@
     <None Include="res\My041_ShowDifPic.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\01.bmp" />
+    <Image Include="res\02.jpg" />
+    <Image Include="res\03.ico" />
+    <Image Include="res\04.gif" />
     <Image Include="res\041_ShowDifPic.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="041_ShowDifPic.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
