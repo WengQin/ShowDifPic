@@ -6,6 +6,7 @@
 #include "041_ShowDifPic.h"
 #include "041_ShowDifPicDlg.h"
 #include "afxdialogex.h"
+#include "PictureEx.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
