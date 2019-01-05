@@ -6,7 +6,7 @@
 #include "041_ShowDifPic.h"
 #include "041_ShowDifPicDlg.h"
 #include "afxdialogex.h"
-#include "PictureEx.h"
+
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -59,6 +59,8 @@ CMy041_ShowDifPicDlg::CMy041_ShowDifPicDlg(CWnd* pParent /*=NULL*/)
 void CMy041_ShowDifPicDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_STATIC_JPG, tu2);
+	DDX_Control(pDX, IDC_STATIC_GIF, tu4);
 }
 
 BEGIN_MESSAGE_MAP(CMy041_ShowDifPicDlg, CDialog)

@@ -3,7 +3,8 @@
 //
 
 #pragma once
-
+#include "afxwin.h"
+#include "PictureEx.h"
 
 // CMy041_ShowDifPicDlg ¶Ô»°¿ò
 class CMy041_ShowDifPicDlg : public CDialog
@@ -31,4 +32,7 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CPictureEx tu2;
+	CPictureEx tu4;
 };
