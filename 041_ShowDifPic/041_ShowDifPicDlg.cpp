@@ -67,6 +67,8 @@ BEGIN_MESSAGE_MAP(CMy041_ShowDifPicDlg, CDialog)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON4, &CMy041_ShowDifPicDlg::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON2, &CMy041_ShowDifPicDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -102,7 +104,10 @@ BOOL CMy041_ShowDifPicDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-
+	if (tu4.Load(MAKEINTRESOURCE(IDR_GIF1), _T("gif")))
+		tu4.Draw();
+	if (tu2.Load(MAKEINTRESOURCE(IDR_JPG1), _T("jpg")))
+		tu2.Draw();
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
@@ -155,3 +160,17 @@ HCURSOR CMy041_ShowDifPicDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CMy041_ShowDifPicDlg::OnBnClickedButton4()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	
+}
+
+
+void CMy041_ShowDifPicDlg::OnBnClickedButton2()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	
+}

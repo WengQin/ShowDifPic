@@ -35,4 +35,6 @@ protected:
 public:
 	CPictureEx tu2;
 	CPictureEx tu4;
+	afx_msg void OnBnClickedButton4();
+	afx_msg void OnBnClickedButton2();
 };
